@@ -14,6 +14,7 @@
   $sql = "INSERT INTO `users2` ('firstname', 'lastname', 'email', 'password', 'gender') VALUES ('$first_name', '$last_name', '$email', '$password', '$gender')";
 
   $result = $conn->query($sql);
+//$result = mysqli_query($conn, $sql);
 
   if ($result == TRUE) {
     // code...
@@ -21,6 +22,7 @@
   }
   else {
     echo "Error:" . $sql . "<br />". $conn->error;
+//  die(mysqli_error($conn));
   }
 
   $conn->close();
