@@ -10,7 +10,7 @@
         $gender = $_POST['gender'];
         $password = $_POST['password'];
 
-        $sql = "UPDATE `users2` SET 'firstname' = '$firstname', 'lastname' = '$lastname', 'email' = '$email', 'password' = '$password', 'gender' = '$gender' WHERE 'id' = '$user_id' ";
+        $sql = "UPDATE `users2` SET `firstname` = '$firstname', 'lastname' = '$lastname', 'email' = '$email', 'password' = '$password', 'gender' = '$gender' WHERE 'id' = '$user_id' ";
 
         $result = $conn->query($sql);
 
@@ -30,8 +30,8 @@
 
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
-                        $firstname = $row['firstname'];
-                        $lastname = $row['lastname'];
+                        $first_name = $row['firstname'];
+                        $last_name = $row['lastname'];
                         $email = $row['email'];
                         $password = $row['password'];
                         $gender = $row['gender'];
@@ -51,7 +51,7 @@
                                     <fieldset>
                                         <legend>Personal Information</legend>
                                         First Name:<br>
-                                        <input type="text" name="firstname" value="<?php echo $first_name; ?>">
+                                        <input type="text" name="first_name" value="<?php echo $first_name; ?>">
                                         <input type="hidden" name="user_id" value="<?php echo $id; ?>">
                                         <br>
                                         Last Name:<br>

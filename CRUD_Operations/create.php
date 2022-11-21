@@ -1,6 +1,10 @@
 <?php
 
   include "config.php";
+$first_name="";
+$last_name="";
+//$email="";
+$gender="";
 
   if(isset($_POST['submit'])) {
     $first_name = $_POST['firstname'];
@@ -11,13 +15,12 @@
   }
 
 
-  $sql = "INSERT INTO `users2` ('firstname', 'lastname', 'email', 'password', 'gender') VALUES ('$first_name', '$last_name', '$email', '$password', '$gender')";
+  $sql = "INSERT INTO `users2` (`firstname`, `lastname`, `email`, `password`, `gender`) VALUES ('$first_name', '$last_name', '$email', '$password', '$gender')";
 
   $result = $conn->query($sql);
 //$result = mysqli_query($conn, $sql);
 
   if ($result == TRUE) {
-    // code...
     echo "New Record created succesfully";
   }
   else {
@@ -45,6 +48,9 @@
          <br>
          Last Name: <br>
          <input type="text" name="lastname" value="">
+         <br>
+         Email:<br>
+         <input type="text" name="email" value="">
          <br>
          Password: <br>
          <input type="password" name="password" value="">
