@@ -7,7 +7,4 @@
   }
   echo AreaOfRectangle(4,3);
 
-
-
-
  ?>
