@@ -6,8 +6,5 @@
     return "Area of rectangle is {$area}";
   }
   echo AreaOfRectangle(4,3);
-
-
-
-
+  
  ?>
